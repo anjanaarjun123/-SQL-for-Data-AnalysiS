@@ -31,6 +31,7 @@ JOIN payments ON orders.order_id = payments.order_id
 GROUP BY customer_id
 HAVING total_spent > 1000;
 7.  Index Optimization
+CREATE INDEX idx_order_customer ON orders(customer_id);
 
 
 
